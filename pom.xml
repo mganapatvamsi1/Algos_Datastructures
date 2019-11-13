@@ -136,6 +136,12 @@
             <version>16.0.2</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Upgrading com.mchange:c3p0 to version 0.9.5.4 -->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>[0.9.5.4,)</version>
+        </dependency>
     </dependencies>
 
     <build>

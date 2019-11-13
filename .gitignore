@@ -1,4 +1,10 @@
 *.class
 .DS_Store
+*.xml
+*.lst
+*.iml
+*.jar
+*.original
 *.zip
+*.kotlin_module
 9
