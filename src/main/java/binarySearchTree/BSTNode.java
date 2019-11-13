@@ -3,19 +3,19 @@ package binarySearchTree;
 /**
  * Recursive implementation of BinarySearchTree
  */
-public class Node {
-    Node left, right;
+public class BSTNode {
+    BSTNode left, right;
     private int data;
-    public Node(int data) {
+    public BSTNode(int data) {
         this.data = data;
     }
 
     public void insert(int value) {
         if (value <= data) {
-            if (left == null) left = new Node(value);
+            if (left == null) left = new BSTNode(value);
             else left.insert(value);
         } else {
-            if (right == null) right = new Node(value);
+            if (right == null) right = new BSTNode(value);
             else right.insert(value);
         }
     }
@@ -32,9 +32,9 @@ public class Node {
     }
 
     public void printInOrderTraversal() {
-        if (left != null) left.printInOrderTraversal();
-        System.out.println(data);
-        if (right != null) right.printInOrderTraversal();
+            if (left != null) left.printInOrderTraversal();
+            System.out.println(data);
+            if (right != null) right.printInOrderTraversal();
     }
 
     public void printPreOrderTraversal() {
@@ -50,21 +50,21 @@ public class Node {
     }
 
     public static void main(String[] args) {
-        Node node = new Node(10);
-       node.left = new Node(5);
-       node.right = new Node(12);
-        node.insert(4);
-        node.insert(7);
-        node.insert(11);
-        node.insert(14);
-        node.insert(13);
-        System.out.println(node.contains(6));
-        System.out.println(node.contains(10));
-       node.printInOrderTraversal();
+        BSTNode BSTNode = new BSTNode(10);
+       BSTNode.left = new BSTNode(5);
+       BSTNode.right = new BSTNode(12);
+        BSTNode.insert(4);
+        BSTNode.insert(7);
+        BSTNode.insert(11);
+        BSTNode.insert(14);
+        BSTNode.insert(13);
+        System.out.println(BSTNode.contains(6));
+        System.out.println(BSTNode.contains(10));
+       BSTNode.printInOrderTraversal();
         System.out.println();
-        node.printPreOrderTraversal();
+        BSTNode.printPreOrderTraversal();
         System.out.println();
-        node.printPostOrderTraversal();
+        BSTNode.printPostOrderTraversal();
     }
 
 }
