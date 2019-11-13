@@ -1,4 +1,9 @@
 *.class
 .DS_Store
+*.xml
+*.lst
+*.iml
+*.jar
+*.original
 *.zip
 9
