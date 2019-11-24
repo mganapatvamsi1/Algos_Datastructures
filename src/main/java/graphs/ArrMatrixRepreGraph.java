@@ -1,12 +1,12 @@
 package graphs;
 
-public class AmrGraph {
+public class ArrMatrixRepreGraph {
 
     private int V; // no. of vertices in the graph
     private int E; // no. of edges in the graph
     private int[][] adjMatrix;
 
-    public AmrGraph(int nodes) {
+    public ArrMatrixRepreGraph(int nodes) {
         this.V = nodes;
         this.E = 0;
         this.adjMatrix = new int[nodes][nodes];
@@ -30,12 +30,12 @@ public class AmrGraph {
     }
 
     public static void main(String[] args) {
-        AmrGraph graph = new AmrGraph(4);
-        graph.addEdge(0,1);
-        graph.addEdge(1,2);
-        graph.addEdge(2,3);
-        graph.addEdge(3,0);
-        System.out.println(graph);
+        ArrMatrixRepreGraph matrixGraph = new ArrMatrixRepreGraph(4);
+        matrixGraph.addEdge(0,1);
+        matrixGraph.addEdge(1,2);
+        matrixGraph.addEdge(2,3);
+        matrixGraph.addEdge(3,0);
+        System.out.println(matrixGraph);
     }
 
 }
