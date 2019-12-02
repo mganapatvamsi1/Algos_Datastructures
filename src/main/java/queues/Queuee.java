@@ -2,7 +2,7 @@ package queues;
 
 import java.util.NoSuchElementException;
 
-public class Queue {
+public class Queuee {
     private ListNode front;
     private ListNode rear;
     private int length;
@@ -17,7 +17,7 @@ public class Queue {
         }
     }
 
-    public Queue() {
+    public Queuee() {
         front = null;
         rear = null;
         length = 0;
@@ -40,7 +40,7 @@ public class Queue {
     }
 
     public int dequeue() {
-        if (isEmpty()) throw new NoSuchElementException("Queue is already empty");
+        if (isEmpty()) throw new NoSuchElementException("Queuee is already empty");
         int result = front.data;
         front = front.next;
         if (front == null) rear = null;
@@ -49,12 +49,12 @@ public class Queue {
     }
 
     public int first() {
-        if (isEmpty()) throw new NoSuchElementException("Queue is already empty");
+        if (isEmpty()) throw new NoSuchElementException("Queuee is already empty");
         return front.data;
     }
 
     public int last() {
-        if (isEmpty()) throw new NoSuchElementException("Queue is already empty");
+        if (isEmpty()) throw new NoSuchElementException("Queuee is already empty");
         return rear.data;
     }
 
@@ -69,19 +69,19 @@ public class Queue {
     }
 
     public static void main(String[] args) {
-        Queue queue = new Queue();
-        queue.print();
-        queue.enqueue(10);
-        queue.enqueue(15);
-        queue.enqueue(20);
-        queue.enqueue(25);
-        queue.print();
+        Queuee queuee = new Queuee();
+        queuee.print();
+        queuee.enqueue(10);
+        queuee.enqueue(15);
+        queuee.enqueue(20);
+        queuee.enqueue(25);
+        queuee.print();
 
-        queue.dequeue();
-        queue.print();
+        queuee.dequeue();
+        queuee.print();
 
-        System.out.println(queue.first());
-        System.out.println(queue.last());
+        System.out.println(queuee.first());
+        System.out.println(queuee.last());
     }
 
 
