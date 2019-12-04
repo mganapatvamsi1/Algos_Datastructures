@@ -28,7 +28,7 @@ public class BFSUndirectedGraph {
         }
         return sb.toString();
     }
-    public void breadthFirstSearch(int value) {
+    public void bFS(int value) {
         boolean[] visited = new boolean[V];
         Queue<Integer> queue = new LinkedList<>();
         visited[value] = true;
@@ -44,14 +44,13 @@ public class BFSUndirectedGraph {
             }
         }
     }
-
     public static void main(String[] args) {
-        BFSUndirectedGraph bfs = new BFSUndirectedGraph(5);
-        bfs.addEdge(0,1);
-        bfs.addEdge(1,2);
-        bfs.addEdge(2,3);
-        bfs.addEdge(3,0);
-        bfs.breadthFirstSearch(0);
-        //System.out.println(bfs);
+        BFSUndirectedGraph bfsUndirectedGraph = new BFSUndirectedGraph(5);
+        bfsUndirectedGraph.addEdge(0,1);
+        bfsUndirectedGraph.addEdge(1,2);
+        bfsUndirectedGraph.addEdge(2,3);
+        bfsUndirectedGraph.addEdge(3,0);
+        bfsUndirectedGraph.bFS(0);
     }
+    
 }

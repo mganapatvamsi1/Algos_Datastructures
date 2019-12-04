@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class DfsUndirectedGraph {
-
     private int V,E;
     LinkedList<Integer>[] adj;
 
@@ -29,8 +28,7 @@ public class DfsUndirectedGraph {
         }
         return sb.toString();
     }
-
-    public void depthFirstSearch(int value) {
+    public void dFS(int value) {
         boolean[] visited = new boolean[V];
         Stack<Integer> stack = new Stack<>();
         stack.push(value);
@@ -47,15 +45,15 @@ public class DfsUndirectedGraph {
             }
         }
     }
-
     public static void main(String[] args) {
-        DfsUndirectedGraph dfs = new DfsUndirectedGraph(5);
-        dfs.addEdge(0,1);
-        dfs.addEdge(1,2);
-        dfs.addEdge(2,3);
-        dfs.addEdge(3,0);
-        dfs.addEdge(2,4);
-        dfs.depthFirstSearch(0);
+        DfsUndirectedGraph dfsUndirectedGraph = new DfsUndirectedGraph(8);
+        dfsUndirectedGraph.addEdge(1,2);
+        dfsUndirectedGraph.addEdge(1,3);
+        dfsUndirectedGraph.addEdge(2,4);
+        dfsUndirectedGraph.addEdge(2,5);
+        dfsUndirectedGraph.addEdge(3,6);
+        dfsUndirectedGraph.addEdge(3,7);
+        dfsUndirectedGraph.dFS(1);
     }
 
 }
