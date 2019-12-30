@@ -2,7 +2,7 @@ package dynamicProgramming;
 
 public class BottomUpDP {
 
-    public static int fib(int n) {
+    public int fib(int n) {
         int[] table = new int[n + 1];
         table[0] = 0;
         table[1] = 1;
