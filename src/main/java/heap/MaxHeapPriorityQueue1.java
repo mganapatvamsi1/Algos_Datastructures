@@ -1,10 +1,10 @@
 package heap;
 
-public class MaxHeapPriorityQueue {
+public class MaxHeapPriorityQueue1 {
     Integer[] heap;
     int n; // size of max heap
 
-    public MaxHeapPriorityQueue(int capacity) {
+    public MaxHeapPriorityQueue1(int capacity) {
         heap = new Integer[capacity + 1]; // index 0 is kept as empty
         n = 0;
     }
@@ -39,22 +39,22 @@ public class MaxHeapPriorityQueue {
             int temp = heap[k];
             heap[k] = heap[k/2];
             heap[k/2] = temp;
-            k = k/2; // Because we need to continue shiftin new value inserted is at correct
+            k = k/2; // Because we need to continue shifting new value inserted is at correct
         }
     }
 
     public static void main(String[] args) {
-        MaxHeapPriorityQueue maxHeapPriorityQueue = new MaxHeapPriorityQueue(3);
+        MaxHeapPriorityQueue1 maxHeapPriorityQueue1 = new MaxHeapPriorityQueue1(3);
      // System.out.println(maxHeapPriorityQueue.isEmpty());
-        maxHeapPriorityQueue.insert(4);
-        maxHeapPriorityQueue.insert(5);
-        maxHeapPriorityQueue.insert(0);
-        maxHeapPriorityQueue.insert(2);
-        maxHeapPriorityQueue.insert(6);
-        maxHeapPriorityQueue.insert(1);
-        maxHeapPriorityQueue.insert(3);
-        System.out.println(maxHeapPriorityQueue.size());
-        maxHeapPriorityQueue.printMaxHeap();
+        maxHeapPriorityQueue1.insert(4);
+        maxHeapPriorityQueue1.insert(5);
+        maxHeapPriorityQueue1.insert(0);
+        maxHeapPriorityQueue1.insert(2);
+        maxHeapPriorityQueue1.insert(6);
+        maxHeapPriorityQueue1.insert(1);
+        maxHeapPriorityQueue1.insert(3);
+        System.out.println(maxHeapPriorityQueue1.size());
+        maxHeapPriorityQueue1.printMaxHeap();
     }
 
 }
