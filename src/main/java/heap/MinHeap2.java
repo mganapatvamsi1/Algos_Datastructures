@@ -70,6 +70,7 @@ public class MinHeap2 {
         }
     }
 
+
     // builds the min-heap using the minHeapify
     public void minHeap() {
         for (int i = ((size - 1) / 2); i >= 1; i--) {
