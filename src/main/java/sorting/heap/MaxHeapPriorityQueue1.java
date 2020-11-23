@@ -1,8 +1,8 @@
-package heap;
+package sorting.heap;
 
 public class MaxHeapPriorityQueue1 {
     Integer[] heap;
-    int n; // size of max heap
+    int n; // size of max sorting.heap
 
     public MaxHeapPriorityQueue1(int capacity) {
         heap = new Integer[capacity + 1]; // index 0 is kept as empty

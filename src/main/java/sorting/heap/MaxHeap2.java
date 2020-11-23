@@ -1,4 +1,4 @@
-package heap;
+package sorting.heap;
 
 import java.util.NoSuchElementException;
 
@@ -54,12 +54,12 @@ public class MaxHeap2 {
         size++;
     }
 
-    // removes and returns the minimum element from the heap
+    // removes and returns the minimum element from the sorting.heap
     public int remove() {
         if (size == 0) {
             throw new NoSuchElementException();
         }
-        // since its max heap will be at root value
+        // since its max sorting.heap will be at root value
         int poppedValue = heapElements[0];
         heapElements[0] = heapElements[--size];
         //size--;

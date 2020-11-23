@@ -1,8 +1,6 @@
-package heap;
+package sorting.heap;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class MinHeap1 {
     private int capacity = 10;

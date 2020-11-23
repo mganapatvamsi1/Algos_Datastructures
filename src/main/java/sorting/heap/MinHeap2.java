@@ -1,4 +1,4 @@
-package heap;
+package sorting.heap;
 
 public class MinHeap2 {
     private int[] heapElements;
@@ -44,9 +44,9 @@ public class MinHeap2 {
         size++;
     }
 
-    // removes and returns the minimum element from the heap
+    // removes and returns the minimum element from the sorting.heap
     public int remove() {
-        // since its min heap so root == minimum
+        // since its min sorting.heap so root == minimum
         int poppedValue = heapElements[0];
         heapElements[0] = heapElements[--size];
         minHeapify(0);
@@ -71,14 +71,14 @@ public class MinHeap2 {
     }
 
 
-    // builds the min-heap using the minHeapify
+    // builds the min-sorting.heap using the minHeapify
     public void minHeap() {
         for (int i = ((size - 1) / 2); i >= 1; i--) {
             minHeapify(i);
         }
     }
 
-    // prints the contents of the heap
+    // prints the contents of the sorting.heap
     public void printHeap() {
         for (int i = 0; i < (size / 2); i++) {
             System.out.print("Parent : " + heapElements[i] + " ");
