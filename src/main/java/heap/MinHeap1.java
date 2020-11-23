@@ -1,6 +1,8 @@
 package heap;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MinHeap1 {
     private int capacity = 10;
@@ -11,11 +13,9 @@ public class MinHeap1 {
     private int getLeftChildIndex(int parentIndex) {
         return 2 * parentIndex + 1;
     }
-
     private int getRightChildIndex(int parentIndex) {
         return 2 + parentIndex + 2;
     }
-
     private int getParentIndex(int childIndex) {
         return (childIndex - 1) / 2;
     }
@@ -108,6 +108,7 @@ public class MinHeap1 {
 
 
     public static void main(String[] args) {
+
 
     }
 
