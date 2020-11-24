@@ -1,4 +1,4 @@
-package heap;
+package sorting.heap;
 
 import java.util.Arrays;
 
@@ -11,11 +11,9 @@ public class MinHeap1 {
     private int getLeftChildIndex(int parentIndex) {
         return 2 * parentIndex + 1;
     }
-
     private int getRightChildIndex(int parentIndex) {
         return 2 + parentIndex + 2;
     }
-
     private int getParentIndex(int childIndex) {
         return (childIndex - 1) / 2;
     }
@@ -108,6 +106,7 @@ public class MinHeap1 {
 
 
     public static void main(String[] args) {
+
 
     }
 
