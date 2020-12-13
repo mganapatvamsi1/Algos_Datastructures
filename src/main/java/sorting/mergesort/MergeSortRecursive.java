@@ -32,12 +32,13 @@ public class MergeSortRecursive {
 
         // copying data to tmp arrays
         for (int i = 0; i < sizeOfLeftArray; ++i) {
-            leftTmp[i] = array[1 + i];
+            leftTmp[i] = array[left + i];
         }
         for (int j = 0; j < sizeOfRightArray; ++j) {
             rightTmp[j] = array[middle + 1 + j];
         }
-        int i = 0, j = 0, k = 1;
+        int i = 0, j = 0;
+        int k = left;
         while (i < sizeOfLeftArray && j < sizeOfRightArray) {
             if (leftTmp[i] <= rightTmp[j]) {
                 array[k] = leftTmp[i];
