@@ -114,18 +114,71 @@ public class BinarySearch {
     }
 
     /* 5. Square Root
-    Given an integer, find its square root without using the built-in square root function. Only return the integer part (truncate the decimals).
+    Given an integer, find its square root without using the built-in square root function.
+    Only return the integer part (truncate the decimals).
     Example #
     Input: 16
     Output: 4
     Input: 8
     Output: 2  (Explanation: Square root of 8 is 2.83..., return integer part 2).   */
     public static int square_root(int n) {
-
-
-        return -1;
+        if (n == 0) return  0;
+        int left = 1;
+        int right = n;
+        int result = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (mid <= n / mid) {
+                result = mid;
+                left = mid + 1;
+            } else right = mid - 1;
+        }
+        return result;
     }
 
+    /* 6. Find the minimum in a rotated sorted array.
+    A sorted array was rotated at an unknown pivot. For example, [10, 20, 30, 40, 50] becomes [30, 40, 50, 10, 20].
+    Find the index of the minimum element in this array.
+    Example #
+    Input: [30, 40, 50, 10, 20]
+    Output: 3
+    Explanation: The smallest element is 10 and its index is 3.   */
+    public static int findMinRotated(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+        int boundaryIndex = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] <= arr[right]) {
+                boundaryIndex = mid;
+                right = mid - 1;
+            } else left = mid + 1;
+        }
+        return boundaryIndex;
+    }
+
+    /* 7. The peak of a mountain array.
+    A mountain array is defined as an array that:
+    Has at least 3 elements.
+    Has an element with the largest value called the “peak”, at an index k. The array elements monotonically increase from the first element to A[k], and then monotonically decreases from A[k + 1] to the last element of the array. Thus creating a “mountain” of numbers.
+    Find the index of the peak element. Assume there are no duplicates.
+    Example #
+    Input: 0 1 2 3 2 1 0
+    Output: 3
+    Explanation: The largest element is 3 and its index is 3.  */
+    public static int peakOfMountainArr(int[] arr) {
+        int low = 0;
+        int high = arr.length - 1;
+        int boundaryIndex = -1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (mid == arr.length - 1 || arr[mid] >= arr[mid + 1]) {
+                boundaryIndex = mid;
+                high = mid - 1;
+            } else low = mid + 1;
+        }
+        return boundaryIndex;
+    }
 
     public static void main(String[] args) {
         int[] sampleArr = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
